@@ -1,0 +1,155 @@
+
+/* $color1:#5D81F6;
+$color2:#251D8C;
+$color3:#251D8C;
+$color4:#7DDEEA;
+$color5:#5468F9;
+$color5:#FFFFFF; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    background-color: #7DDEEA;
+
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color:#FFFFFF;
+    font-size: 1.5em;
+}
+
+.presentation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+    }
+
+    .img {
+
+        width: 43%;
+        align-self: flex-end;
+        margin: 4% 4% 0 0;
+    }
+
+    .pointage {
+        font-size: 5em;
+        margin: 10% 0 0 4%;
+        line-height: 2em;
+        max-width: 25%;
+    }
+
+    .span1 {
+        color: #5D81F6;
+    }
+
+    .span2 {
+        color:#251D8C;
+    }
+
+    .prodictif {
+        color:#5D81F6;
+        font-size: 80%;
+        padding-top: 10%;
+
+    }
+
+
+
+
+.btn1 {
+    padding: 1% 5%;
+    border: none;
+    border-radius: 50px;
+    background-color: #7DDEEA;
+    color: #FFFFFF;
+    font-size: 1em;
+    position: absolute;
+    margin: -18% 0 0 7%;
+}
+
+
+.container {
+
+    width: 24%;
+    margin: 12% auto 0%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.containerForm2{
+    margin-top: 4%;
+}
+
+.inpo {
+
+    width: 94%;
+    margin: 3%;
+    padding: 3%;
+    border-radius: 8px;
+}
+
+.btn {
+    background: #7DDEEA;
+    color: white;
+    cursor: pointer;
+    border: none;
+
+
+}
+
+.btn:hover {
+    background: rgb(55, 128, 170);
+    color: rgb(18, 18, 19);
+
+
+}
+
+.tableContainer{
+    width: 80%;
+    margin: 6% auto;
+}
+table {
+
+    border-collapse: collapse;
+    width: 100%;
+   
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+
+}
+
+th .selAllClmn {
+    display: flex;
+    flex-direction: column;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
