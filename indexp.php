@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+
 require('config.php');
 
 if(isset($_POST['ok'])){
@@ -9,10 +11,6 @@ if(isset($_POST['ok'])){
                 $stmt->execute();
                 $don = $stmt->fetchAll(PDO::FETCH_OBJ);
                     foreach($don as $info){
-                  
-
-
-   
         if($_POST['matricule'] == $info->fn_mat){
             header("location: pointage.php?id=$info->fn_id");
         }else{
@@ -35,8 +33,8 @@ if(isset($_POST['ok'])){
 <header>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.php">login</a></li>
+            <li><a href="index.html" class="nava">Home</a></li>
+            <li><a href="login.php" class="nava">login</a></li>
         </ul>
     </nav>
        </header>

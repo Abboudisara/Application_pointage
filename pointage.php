@@ -4,7 +4,6 @@ session_start();
 require('config.php');
      
      $_SESSION['msg']="Information sauvegarder!";
-     
      $myid= $_GET['id'];
 if(isset($_POST['entrer'])){
     
@@ -18,9 +17,6 @@ if(isset($_POST['entrer'])){
         header("location: indexp.php?data_successfully_saved!");
         echo $_SESSION['msg'];
         
- 
-    
-   
 }
 
 if(isset($_POST['sortie'])){
@@ -34,7 +30,7 @@ if(isset($_POST['sortie'])){
         header("location: indexp.php");
         echo $_SESSION['msg'];
     
-    header("location: index.php?data_successfully_saved!");
+    header("location: indexp.php?data_successfully_saved!");
     echo"<script>alert('action réusite!')</script>";
   
 
@@ -48,7 +44,7 @@ if(isset($_POST['pause'])){
        
     ));
     
-        header("location: index.php?date_successfully_saved!");
+        header("location: indexp.php?date_successfully_saved!");
         echo $_SESSION['msg'];
     
     header("location: indexp.php");
@@ -74,9 +70,9 @@ if(isset($_POST['pause'])){
     <nav class="navbar">
         <ul>
        
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.php">login</a></li>
-            <li><a href=""><?php echo date("d-m-Y | h:i") ?></a></li>
+            <li><a href="index.html" class="nava">Home</a></li>
+            <li><a href="login.php" class="nava">login</a></li>
+            <li><a href="" class="nava"><?php echo date("d-m-Y | h:i") ?></a></li>
         </ul>
     </nav>
  </header>

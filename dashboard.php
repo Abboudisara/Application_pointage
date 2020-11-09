@@ -1,6 +1,6 @@
 <?php
 require('config.php');
-$name = $_GET['name'];
+
 
 ?>
 <!DOCTYPE html>
@@ -17,12 +17,12 @@ $name = $_GET['name'];
 <header>
     <nav class="navbar">
         <ul>
-             <li><a href=""> Welcome <?php echo $name ?></a></li>
-            <li><a href="index.html">Home</a></li>
+             <li><a href="" class="nava"> Welcome admin</a></li>
+             <li><a href="crud/fonct.php" class="nava">fonctionnaire</a></li>
+            <li><a href="index.html" class="nava">Home</a></li>
         </ul>
     </nav>
  </header>
-   
    
 
     <form class="container" method="POST" >
@@ -45,8 +45,6 @@ $name = $_GET['name'];
     <table id="table">
     
                 <tr>
-                    
-                   
                     <th>First name</th>
                     <th>last name</th>
                     <th>matricule</th>
@@ -57,6 +55,7 @@ $name = $_GET['name'];
                     <th>Date pause</th>
                     <th>Heure pause</th>
                     <th>Total heure</th>
+                    
                     
                 </tr>
         <?php 
@@ -71,7 +70,7 @@ $name = $_GET['name'];
                     INNER JOIN entrer ON fonctionnaire.fn_id = entrer.fn_id
                     INNER JOIN sortie ON entrer.e_id = sortie.s_id
                     INNER JOIN pause ON sortie.s_id = pause.p_id
-                    WHERE fonctionnaire.fn_id='$id'ORDER BY entrer.e_date DESC LIMIT $days ";
+                    WHERE fonctionnaire.fn_id='$id' ORDER BY entrer.e_date DESC LIMIT $days ";
             $stmt = $pdo->prepare($sql);
             $stmt->execute();
             $don = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -101,7 +100,7 @@ $name = $_GET['name'];
                     <td>$info->s_time</td>
                     <td>$info->p_date</td>
                     <td>$info->p_pause</td>
-                    <td class='combat'>$dtd3</td>
+                    <td>$dtd3</td>
                     
                     ";
                    
@@ -127,46 +126,18 @@ $name = $_GET['name'];
     <form class="tableContainer">
     <table id="table">
                 <tr>
-               
-                    
-                    <!-- <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td> -->
                     <td>Total heure travaillé</td>
-                    <td class='combat'><span id='val'></span> heures</td>
+                    <td><span id='val'></span> heures</td>
                 </tr>
                 <tr>
-               
-                    
-                    <!-- <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td> -->
                     <td>Prix/h</td>
-                    <td class='combat'>25 DH</td>
+                    <td>25 DH</td>
                 </tr>
                 <tr>
                
-                    
-                    <!-- <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td> -->
+
                     <td>Salaire</td>
-                    <td class='combat'><span id='salaire'></span> DH</td>
+                    <td><span id='salaire'></span> DH</td>
                 </tr>
     </table>
     </form>

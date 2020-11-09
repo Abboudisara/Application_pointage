@@ -1,5 +1,4 @@
 var table = document.getElementById("table");
-
 var sumVal = 0;
 var prix = 25;
 var salaire;

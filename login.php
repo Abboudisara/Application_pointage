@@ -19,8 +19,6 @@ if(isset($_POST['ok'])){
         }
     }
 
-
-
 }
 
 ?>
@@ -36,8 +34,8 @@ if(isset($_POST['ok'])){
 <header>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.php">login</a></li>
+            <li><a href="index.html" class="nava">Home</a></li>
+            <li><a href="login.php" >login</a></li>
         </ul>
     </nav>
        </header>
